@@ -1,0 +1,8 @@
+.news-list{
+    position: relative;
+}
+.button-diy{
+    position: absolute;
+    top: 0;
+    right: 2%;
+}

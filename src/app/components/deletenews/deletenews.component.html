@@ -1,0 +1,26 @@
+<div>
+ <h1>Delete this post?</h1>
+  <div *ngIf="item">
+
+    <div class="container page-header ">
+
+
+
+      <div class="row form-group" >
+        <div class="col-md-7 alert news-list">
+          <div class="button-diy">
+            <button class="btn btn-success" (click)="goBack()">Go back</button>
+            <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+          </div>
+          <h2 class="alert-info">{{item.title}}</h2>
+          <p class="lead alert-warning">{{item.text}}</p>
+          <div class="alert-danger">{{item.date}}</div>
+        </div>
+        <div class="col-md-5">
+          <img class=" img-responsive center-block"  src="{{item.img_url}}" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

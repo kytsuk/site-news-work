@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <h2>User comment</h2>
+    <app-comment-add></app-comment-add>
+  </div>
+</div>
+<div *ngIf="item">
+
+  <div class="container page-header " *ngFor="let coment of item">
+
+    <div class="row form-group" >
+      <div class="col-md-7 alert news-list">
+        <button class="button-diy" (click)="onDelete(coment.id)">Delete</button>
+        <h2 class="alert-info">{{coment.name}}</h2>
+        <p class="lead alert-warning">{{coment.text}}</p>
+        <div class="alert-danger">{{coment.date}}</div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
