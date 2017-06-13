@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsServise } from "../../news-date.servise";
-import { News } from "../../news.servise";
+import { NewsServise } from "../news-date.servise";
+import { News } from "../news.servise";
 import { ActivatedRoute } from "@angular/router";
 import { Subscription } from "rxjs/Subscription";
+
 
 @Component({
   selector: 'app-onenews',

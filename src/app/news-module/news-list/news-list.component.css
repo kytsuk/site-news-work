@@ -6,3 +6,7 @@
     top: 0;
     right: 2%;
 }
+.img-post img{
+
+    max-width:25%;
+}

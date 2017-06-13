@@ -1,0 +1,9 @@
+.img-post{
+    display: block;
+    width: 100%;
+}
+.img-post img{
+    display: inline-block;
+    max-width:40%;
+    margin-right: 20px;
+}

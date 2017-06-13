@@ -2,20 +2,27 @@
 
 <div class="container page-header ">
 
- <a routerLink="/creat"><button class="btn btn-success">Creat News</button></a>
+ <a routerLink="/create"><button class="btn btn-success">Creat News</button></a>
     <button class="btn btn-success" (click)="refresh()">Refresh</button>
 <div class="row form-group" *ngFor="let item of post; let p=index">
-    <div class="col-md-7 alert news-list">
+    <div class="col-md-12 alert news-list">
         <div class="button-diy">
             <a [routerLink]="['edit',item.id]"><button class="btn btn-success" >Edit</button></a>
             <a [routerLink]="['delete',item.id]"><button class="btn btn-danger" >Delete</button></a>
         </div>
         <h2 class="alert-info"><a [routerLink]="[item.id]">{{item.title}}</a></h2>
-        <p class="lead alert-warning">{{item.text}}</p>
-        <div class="alert-danger">{{item.date}}</div>
+        <div class="lead alert-warning">
+
+            <div class="img-post">
+                <img class=" pull-left img-responsive "  src="{{item.img_url}}" >
+                <p>{{item.text}}</p>
+            </div>
+        </div>
+        <div class="alert-danger">
+
+            <p>{{item.date}}</p>
+        </div>
     </div>
-    <div class="col-md-5">
-        <img class=" img-responsive center-block"  src="{{item.img_url}}" >
-    </div>
+
 </div>
 </div>

@@ -5,18 +5,20 @@
 
 
     <div class="row form-group" >
-      <div class="col-md-7 alert news-list">
+      <div class="col-md-12 alert news-list">
         <div class="button-diy">
           <a routerLink="/news/edit/{{item.id}}"> <button class="btn btn-success" >Edit</button></a>
           <a routerLink="/news/delete/{{item.id}}"> <button class="btn btn-danger" >Delete</button></a>
         </div>
         <h2 class="alert-info">{{item.title}}</h2>
-        <p class="lead alert-warning">{{item.text}}</p>
+        <div class="lead alert-warning">
+          <div class="img-post">
+            <img class=" pull-left img-responsive clearfix"  src="{{item.img_url}}" >
+            <p>{{item.text}}</p>
+          </div>
         <div class="alert-danger">{{item.date}}</div>
       </div>
-      <div class="col-md-5">
-        <img class=" img-responsive center-block"  src="{{item.img_url}}" >
-      </div>
+
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from "rxjs/Observable";
-import { News } from "./news.servise";
+import { News } from "../news-module/news.servise";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -23,17 +23,7 @@ export class CommentsServise{
     public  deleteComment(id){
         return this.post(this.url+'comments-remove/'+ id);
     }
-  /*  public addNews(addnews:News){
-        return this.post(this.url+"news" , addnews).subscribe(res=>res);
-    }
 
-    public  deleteNews(id){
-        return this.post(this.url+'news-remove/'+ id);
-    }
-    public editNews(id, editnews:News){
-        return this.post(this.url+"news/"+ id, editnews).subscribe(res=>res);
-    }
-*/
     private extractComments (response:Response){
         let res = response.json().comments;
         let comments : Comments[] = [];

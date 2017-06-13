@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { News } from "../../news.servise";
+import { News } from "../news.servise";
 
-import { NewsServise } from "../../news-date.servise";
+import { NewsServise } from "../news-date.servise";
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({

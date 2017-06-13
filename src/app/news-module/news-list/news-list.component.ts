@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsServise } from "../../news-date.servise";
-import { News } from "../../news.servise";
+import { NewsServise } from "../news-date.servise";
+import { News } from "../news.servise";
 
 @Component({
   selector: 'app-news-list',

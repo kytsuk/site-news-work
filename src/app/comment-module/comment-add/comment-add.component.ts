@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { CommentsServise } from "../../comments-date.servise";
-import { Comments } from "../../comments.servise";
+import { CommentsServise } from "../comments-date.servise";
+import { Comments } from "../comments.servise";
 import { Subscription } from "rxjs/Subscription";
 import { ActivatedRoute, Router } from "@angular/router";
 
@@ -14,7 +14,7 @@ export class CommentAddComponent implements OnInit {
   commentForm: FormGroup;
   id: number;
   private sub: Subscription;
-  constructor(private activateRoute: ActivatedRoute, private dataNews: CommentsServise, private router:Router) {
+  constructor(private activateRoute: ActivatedRoute, private commentservise: CommentsServise, private router:Router) {
     this.sub = activateRoute.params.subscribe(params => this.id = +params['id']);
   console.log(this.id)
   }
@@ -38,7 +38,7 @@ export class CommentAddComponent implements OnInit {
 
 
 
-    this.dataNews.addComment(item, this.id).subscribe(
+    this.commentservise.addComment(item, this.id).subscribe(
         ()=>this.goBack()
     );
   }

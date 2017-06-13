@@ -12,15 +12,13 @@ private url = "http://api.test.dev/";
 constructor(private http: Http){}
 
    public getNews():any {
-        let news = this.http.get(this.url+"news")
+        return  this.http.get(this.url+"news")
             .map(this.extractNews);
-        return news;
     }
     public getNew(id:number):any {
-        let onenews = this.http.get(this.url+"news" + "/" +id)
+     return this.http.get(this.url+"news" + "/" +id)
             .map(this.extractNew);
-        return onenews;
-    }
+        }
 
     public addNews(addnews:News){
     return this.post(this.url+"news" , addnews).subscribe(res=>res);
@@ -29,8 +27,8 @@ constructor(private http: Http){}
     public  deleteNews(id){
         return this.post(this.url+'news-remove/'+ id);
     }
-    public editNews(id, editnews:News){
-        return this.post(this.url+"news/"+ id, editnews).subscribe(res=>res);
+    public editNews(id:number, post){
+        return this.post(this.url+"news/"+ id, post)
     }
 
     private extractNews (response:Response){

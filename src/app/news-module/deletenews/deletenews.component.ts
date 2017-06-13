@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { News } from "../../news.servise";
+import { News } from "../news.servise";
 import { Subscription } from "rxjs/Subscription";
 import { ActivatedRoute, Router } from "@angular/router";
-import { NewsServise } from "../../news-date.servise";
+import { NewsServise } from "../news-date.servise";
 
 @Component({
   selector: 'app-deletenews',
